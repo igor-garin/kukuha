@@ -30,3 +30,7 @@ LOGGING_LEVELS_OVERRIDES = (
     # Enable INFO log level for `tests` logger which is used by pytest tests.
     ('tests', 'INFO'),
 )
+
+OPENAI_API_KEY = None
+PINECONE_API_KEY = None
+PINECONE_ENV = None
