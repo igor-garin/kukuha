@@ -1,0 +1,9 @@
+### How to make and apply migrations
+ 
+- Autogenerate new migration
+ ```
+ALEMBIC_CONFIG=kukuha/db/alembic.ini alembic revision --autogenerate -m "Initial DB structure"
+ ```
+- Upgrade database model to latest state
+ ```
+ALEMBIC_CONFIG=kukuha/db/alembic.ini alembic upgrade head

@@ -31,6 +31,9 @@ LOGGING_LEVELS_OVERRIDES = (
     ('tests', 'INFO'),
 )
 
+DATABASE_ENGINE = "sqlite:///"
+OPERATIONAL_DB_NAME = 'history.db'
+
 OPENAI_API_KEY = None
 PINECONE_API_KEY = None
 PINECONE_ENV = None

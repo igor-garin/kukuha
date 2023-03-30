@@ -16,3 +16,4 @@ docs/build_*
 # misc
 .DS_Store
 settings/dev.py
+history.db
