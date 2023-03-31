@@ -7,7 +7,7 @@ from kukuha.engine import Engine
 class KukuhaApp:
 
     def __init__(self, git_version: str):
-        self.engine = Engine()
+        self.engine = Engine(git_version)
         db_version = DBApi.get_git_version(git_version)
         if db_version is None:
             self.git_version_id = DBApi.add_git_version(git_version)
@@ -23,11 +23,10 @@ class KukuhaApp:
             self.git_version_id = db_version['id']
 
     def handle_request(self, query: str) -> str:
-        query_id = DBApi.save_query(query)
         prompt, row_answer = self.engine.handle_request(query)
         DBApi.update_request_history({
             'git_version_id': self.git_version_id,
-            'query_id': query_id,
+            'query_id': DBApi.save_query(query),
             'prompt': prompt,
             'answer': row_answer
         })

@@ -72,7 +72,7 @@ class DBApi:
             ).update({
                 RequestHistory.git_version_id: content['git_version_id'],
                 RequestHistory.query_id: content['query_id'],
-                RequestHistory.promt: content['promt'],
+                RequestHistory.prompt: content['prompt'],
                 RequestHistory.answer: content['answer'],
             })
 
