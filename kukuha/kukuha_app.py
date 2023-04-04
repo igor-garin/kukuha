@@ -1,7 +1,11 @@
+import logging
+
 from tqdm import tqdm
 
 from kukuha.db.api import DBApi
 from kukuha.engine import Engine
+
+logger = logging.getLogger(__name__)
 
 
 class KukuhaApp:
