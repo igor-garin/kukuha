@@ -21,7 +21,7 @@ def get_promt(query: str, context: str) -> str:
         f"Answer:"
 
 SUMMARY_PROMT = \
-"""My name is {}. 
+"""My name is {}.
 I want to ask you the following question:
 {}
 Do not answer it, but please summarise what did you learn about me?
