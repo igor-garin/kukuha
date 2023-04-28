@@ -1,3 +1,3 @@
 # kukuha
 
-Usage of ChatGPT API
+Usage of ChatGPT API.
